@@ -4,12 +4,12 @@
 A Chinese Address Parser written by Python
 
 
-### Example
+### Usage
+
+ 1. `git@github.com:lan2720/ChineseAddrParser.git`
+ 2. `pytho addrParse.py 上海近郊青浦区沪青平公路2933弄`
 
 
-``` 
-addrString = '上海近郊青浦区沪青平公路2933弄'
-```
 
 ### Result
 

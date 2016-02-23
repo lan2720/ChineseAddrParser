@@ -1,6 +1,7 @@
 # coding:utf-8
 
 import re
+import sys
 
 cities = {u'上海':None, u'上海市':None}
 
@@ -52,12 +53,13 @@ def longestMatching(s, dictionary):
 	return (s[:maxIdx], s[maxIdx:])
 
 def main():
-	s = '上海近郊青浦区沪青平公路2933弄'
-	d = cnParse(s)
-	# Print result
-	for key, value in d.items():
-		if value != None:
-			print key, value
+    s = sys.argv[1]
+    # s = '上海近郊青浦区沪青平公路2933弄'
+    d = cnParse(s)
+    # Print result
+    for key, value in d.items():
+        if value != None:
+            print key, value
 
 if __name__ == '__main__':
-	main()
+    main()
