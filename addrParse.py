@@ -4,8 +4,7 @@ import re
 
 cities = {u'上海':None, u'上海市':None}
 
-def main():
-	s = u'上海近郊青浦区沪青平公路'
+def cnParse(s):
 	i, leftStr = longestMatching(s, cities)
 
 	reStr = (u'(?P<province>[\u4e00-\u9fa5]+?(?:省|特别行政区|特区))'
@@ -22,20 +21,13 @@ def main():
 			u'?(?P<roadnum>[甲_乙_丙_0-9_-]+?(?:号))*')
 
 	repat = re.compile(reStr)
-
 	grouphehe = re.match(repat, leftStr)
-
 	d = grouphehe.groupdict()
 	if i != "":
 		d['city'] = i
 	else:
 		d['city'] = None
-
-	# Print result
-	for key, value in d.items():
-		if value != None:
-			print key, value
-
+	return d
 
 def longestMatching(s, dictionary):
 	"""
@@ -58,6 +50,14 @@ def longestMatching(s, dictionary):
 		if s[:i] in cities:
 			maxIdx = i
 	return (s[:maxIdx], s[maxIdx:])
+
+def main():
+	s = u'上海近郊青浦区沪青平公路'
+	d = cnParse(s)
+	# Print result
+	for key, value in d.items():
+		if value != None:
+			print key, value
 
 if __name__ == '__main__':
 	main()
