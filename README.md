@@ -1,14 +1,21 @@
 
 # ChineseAddrParser
 
-## A Chinese Address Parser written by Python
+A Chinese Address Parser written by Python
 
 
-### Example:
+### Example
+
+
+``` 
+addrString = '上海近郊青浦区沪青平公路2933弄'
+```
+
+### Result
 
 ![](http://ww4.sinaimg.cn/large/901f9a6fjw1f19hknj5xbj20aa074q42.jpg)
 
-addrString = '上海近郊青浦区沪青平公路2933弄'
+
 
 
 ### ALERT!
