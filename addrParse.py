@@ -52,7 +52,7 @@ def longestMatching(s, dictionary):
 	return (s[:maxIdx], s[maxIdx:])
 
 def main():
-	s = u'上海近郊青浦区沪青平公路'
+	s = '上海近郊青浦区沪青平公路2933弄'
 	d = cnParse(s)
 	# Print result
 	for key, value in d.items():
